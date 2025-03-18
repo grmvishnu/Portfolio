@@ -1,3 +1,4 @@
+// config-overrides.js
 const {
   override,
   addWebpackModuleRule,
@@ -6,20 +7,19 @@ const {
 const path = require("path");
 
 module.exports = override(
-  // Add Webpack alias
   addWebpackAlias({
     "@components": path.resolve(__dirname, "src/components"),
   }),
 
-  // Add a rule to handle SVG files as React components
+  // Add a rule to handle SVG files as images (default is 'file-loader' or 'url-loader')
   addWebpackModuleRule({
     test: /\.svg$/,
     use: [
       {
-        loader: "@svgr/webpack",
+        loader: "file-loader", // Ensure you are using the file-loader (or url-loader)
         options: {
-          // Option to avoid namespace errors
-          throwIfNamespace: false,
+          name: "[name].[ext]",
+          outputPath: "assets/", // Output path for your images
         },
       },
     ],
