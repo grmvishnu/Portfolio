@@ -62,7 +62,7 @@ const schools = [
     cgpa: "4.13/4.30",
   },
   {
-    name: "B V Raju Institute of Technology (BVRIT)",
+    name: "B V Raju Institute of Technology",
     degree: "Bachelor of Technology",
     field: "Information Technology",
     duration: " Aug 2016 - Jul 2020",
