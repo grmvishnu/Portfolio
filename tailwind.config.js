@@ -21,6 +21,10 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+      fontFamily: {
+        serif: ["Times New Roman", "Times", "serif"],
+        calibri: ["Calibri", "sans-serif"],
+      },
     },
   },
   plugins: [],

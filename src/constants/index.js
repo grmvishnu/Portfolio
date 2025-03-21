@@ -1,8 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -56,22 +52,22 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const schools = [
   {
-    title: "Web Developer",
-    icon: web,
+    name: "Dalhousie University",
+    degree: "Master of Applied Computer Science",
+    field: "Computer Science",
+    duration: "Sep 2021 - Sep 2023",
+    location: "Halifax, Canada",
+    cgpa: "4.13/4.30",
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
+    name: "B V Raju Institute of Technology (BVRIT)",
+    degree: "Bachelor of Technology",
+    field: "Information Technology",
+    duration: " Aug 2016 - Jul 2020",
+    location: "Medak, India",
+    cgpa: "9.12/10.00",
   },
 ];
 
@@ -278,4 +274,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { schools, technologies, experiences, testimonials, projects };
