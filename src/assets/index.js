@@ -17,10 +17,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import toppr from "./company/toppr.jpeg";
+import nsha from "./company/nsha.jpeg";
+import trihedral from "./company/trihedral.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -41,10 +40,9 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  toppr,
+  nsha,
+  trihedral,
   carrent,
   jobit,
   tripguide,

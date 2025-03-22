@@ -110,7 +110,16 @@ const About = () => {
               >
                 Cricket
               </a>{" "}
-              (totally productive)
+              (totally productive to watch{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/Virat_Kohli"
+                className="underline font-calibri"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                him
+              </a>
+              )
             </li>
             <li className="mt-4 font-calibri">
               Movies & Web Series (research purposes)
