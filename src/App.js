@@ -34,22 +34,58 @@ const App = () => {
             path="/"
             element={
               <>
-                <Hero />
-                <About />
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                  <Hero />
+                </div>
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                  <About />
+                </div>
               </>
             }
           />
-          <Route path="/education" element={<Education />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/works" element={<Works />} />
+          <Route
+            path="/education"
+            element={
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Education />
+              </div>
+            }
+          />
+          <Route
+            path="/experience"
+            element={
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Experience />
+              </div>
+            }
+          />
+          <Route
+            path="/skills"
+            element={
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Skills />
+              </div>
+            }
+          />
+          <Route
+            path="/works"
+            element={
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Works />
+              </div>
+            }
+          />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route
             path="/contact"
             element={
               <>
-                <Contact />
-                <StarsCanvas />
+                <div className="relative z-0">
+                  <Contact />
+                </div>
+                <div className="relative z-0">
+                  <StarsCanvas />
+                </div>
               </>
             }
           />

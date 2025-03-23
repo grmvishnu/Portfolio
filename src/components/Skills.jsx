@@ -37,7 +37,7 @@ const Skills = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-full leading-[30px]"
       >
         Code - crafted, tech - driven! Here's a collection of tools and
         technologies I've mastered along my journey - each skill sharpened
