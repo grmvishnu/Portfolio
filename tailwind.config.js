@@ -25,6 +25,18 @@ module.exports = {
         serif: ["Times New Roman", "Times", "serif"],
         calibri: ["Calibri", "sans-serif"],
       },
+      keyframes: {
+        bounceCustom: {
+          "0%": { transform: "translateY(0)" },
+          "30%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(0)" },
+          "70%": { transform: "translateY(-5px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        bounceCustom: "bounceCustom 0.5s ease-in-out",
+      },
     },
   },
   plugins: [],

@@ -89,7 +89,7 @@ const Education = () => {
       <div className="flex-1">
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>
-            Mentored by legends - yes, I was that lucky!
+            Mentored by legends - yes, I was that lucky
           </p>
           <h2 className={styles.sectionHeadText}>Education.</h2>
         </motion.div>
