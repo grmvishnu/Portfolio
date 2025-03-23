@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { navbar_logo, menu, close } from "../assets";
@@ -7,19 +7,39 @@ import { navbar_logo, menu, close } from "../assets";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+
+  const handleAboutClick = () => {
+    navigate("/");
+    setTimeout(() => {
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 0);
+  };
+
+  const handleHomeClick = () => {
+    if (window.location.pathname === "/") {
+      const heroSection = document.getElementById("hero");
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: "smooth" });
+        navigate("/");
+      }
+    } else {
+      navigate("/");
+    }
+    setActive("");
+  };
 
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex flex-nowrap justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={handleHomeClick}
         >
           <img
             src={navbar_logo}
@@ -27,10 +47,10 @@ const Navbar = () => {
             className="w-9 h-9 object-contain"
           />
 
-          <p className="text-white text-[16px] xl:text-[18px] font-bold cursor-pointer flex truncate max-w-xs">
+          <p className="text-white text-[16px] xl:text-[18px] font-bold flex truncate max-w-xs">
             Guturu Rama Mohan Vishnu
           </p>
-        </Link>
+        </div>
 
         {/* Desktop Menu: only visible on xl (>=1280px) */}
         <ul className="list-none hidden xl:flex flex-row gap-10">
@@ -40,9 +60,18 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer font-calibri`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                setActive(link.title);
+                if (link.title === "About") {
+                  handleAboutClick();
+                }
+              }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.title === "About" ? (
+                <span className="cursor-pointer">About</span>
+              ) : (
+                <Link to={`/${link.id}`}>{link.title}</Link>
+              )}
             </li>
           ))}
         </ul>
@@ -70,9 +99,18 @@ const Navbar = () => {
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
+                    if (link.title === "About") {
+                      handleAboutClick();
+                    } else {
+                      navigate(`/${link.id}`);
+                    }
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  {link.title === "About" ? (
+                    <span className="cursor-pointer">About</span>
+                  ) : (
+                    <Link to={`/${link.id}`}>{link.title}</Link>
+                  )}
                 </li>
               ))}
             </ul>
