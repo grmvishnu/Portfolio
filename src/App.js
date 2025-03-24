@@ -27,7 +27,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-primary min-h-screen md:mt-0 mt-[40px]">
         <Navbar />
         <Routes>
           <Route
@@ -80,7 +80,7 @@ const App = () => {
             path="/contact"
             element={
               <>
-                <div className="relative z-0">
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                   <Contact />
                 </div>
                 <div className="relative z-0">
