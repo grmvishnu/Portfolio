@@ -16,7 +16,6 @@ import {
   firebase,
   flask,
   gcp,
-  git,
   github_tech,
   heroku,
   html,
@@ -44,9 +43,13 @@ import {
   trackstudio,
   typescript,
   vtscada,
-  carrent,
-  jobit,
-  tripguide,
+  portfolio,
+  budgetsurfing,
+  dbms,
+  greencloud,
+  serverless,
+  ecommerce,
+  tornado_model,
 } from "../assets";
 
 export const navLinks = [
@@ -224,66 +227,225 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Portfolio Website",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Created an immersive digital portfolio using advanced technologies like React.js, Three.js and React Three Fiber, seamlessly integrating dynamic 3D hero sections, interactive work displays, and a visually stunning skills showcase that redefines user engagement. <br /> Engineered a refined, responsive interface with Tailwind CSS, enhanced by smooth cinematic animations via Framer Motion. The design features animated projects, certifications, and interactive sections that elevate the overall user experience. <br /> Implemented a fully automated CI/CD pipeline with GitHub Actions, streamlining the build process and seamlessly deploying updates to AWS S3. Leveraged AWS CloudFront for secure HTTPS connections, global content delivery, ensuring optimal performance and scalability across all device.",
     tags: [
       {
-        name: "react",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Three.js",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "React Three Fiber",
         color: "pink-text-gradient",
       },
+      {
+        name: "AWS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "CI/CD Pipeline",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "GitHub Actions",
+        color: "blue-text-gradient",
+      },
     ],
-    image: carrent,
+    image: portfolio,
+    source_code_link: "https://github.com/grmvishnu/Portfolio.git",
+  },
+  {
+    name: "Budget Surfing",
+    description:
+      "Created a Spring Boot based application enabling domestic and international hotel bookings, along with the functionality to convert residencies into hotels. Employed clean code practices, design/architecture patterns, data structures, SOLID principles, and MVC layer distribution, adhering to test-driven development (TDD). <br /> Harnessed Code Smell Detection techniques to reduce technical debt and improve maintainability in object-oriented design (OOP). Conducted unit testing with JUnit and Mockito, achieving over 90% test coverage, and validated APIs using Postman. Tracked work items using Atlassian JIRA and collaborated on code through GitLab, ensuring efficient workflow and version control.",
+    tags: [
+      {
+        name: "Java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spring Boot",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Mockito",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Heroku",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JUnit",
+        color: "green-text-gradient",
+      },
+    ],
+    image: budgetsurfing,
+    source_code_link:
+      "https://github.com/grmvishnu/Dalhousie_University_CSCI_5308_ASDC.git",
+  },
+  {
+    name: "Distributed Relational Database Management System",
+    description:
+      "Devised and implemented a distributed relational database management system (RDBMS) inspired by MySQL, hosted across two GCP instances in separate availability zones, ensuring high availability and fault tolerance. <br /> Constructed essential database functionalities, including Query Processing (DDL, DML, DQL, TCL), Transaction Log Management, Reverse Engineering for data modeling, Analytics, and User Authentication. Enabled schema management with support for primary and foreign keys, table relationships, and handling data duplication. <br /> Utilized a combination of data structures for efficient in-memory operations and designed a custom file-based storage system for persistent data management. Released the system on Heroku for scalable testing and operations. Built a console-based user interface for streamlined query execution and system interaction. Executed log management and analytics to track user operations & maintain database consistency during schema modifications.",
+    tags: [
+      {
+        name: "Java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GCP",
+        color: "green-text-gradient",
+      },
+    ],
+    image: dbms,
+    source_code_link:
+      "https://github.com/grmvishnu/Dalhousie_University_CSCI_5408_DMWA.git",
+  },
+  {
+    name: "E-commerce Clothing Website",
+    description:
+      "Established a clothing e-commerce platform that enables authenticated users to browse, purchase garments, and track order history, delivering a seamless shopping experience. Built a responsive and device-compatible user interface using ReactJS, HTML, and CSS, adhering to Web Usability Principles such as User-Centric Design and Task Flow Optimization. Leveraged Redux for efficient state management and seamless user interactions. <br /> Engineered a secure backend using MongoDB, Express.js, and NodeJS, implementing Web Security Guidelines to ensure data protection. Followed Agile principles for continuous development and deployment (CI/CD) and deployed the system on Heroku. Made low- and high-fidelity prototypes for each feature to ensure optimal task flows. Conducted performance testing to deliver a high-performing, scalable system.",
+    tags: [
+      {
+        name: "ReactJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "NodeJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Heroku",
+        color: "green-text-gradient",
+      },
+    ],
+    image: ecommerce,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Green Cloud",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Established a cloud application to translate text into audio in the desired language, providing downloadable and playable audio files. Innovated the frontend in ReactJS and backend in Django. Automated deployment using AWS CloudFormation for microservice provisioning. <br /> Leveraged AWS Lambda to integrate with AWS Polly and AWS Translate for real-time text translation and audio generation, with outputs stored in user-specific S3 buckets. Secured data and APIs with a Virtual Private Cloud (VPC) and harnessed services like EC2, RDS, and S3 for hosting, storage, and database management, ensuring reliability and smooth application operation.",
     tags: [
       {
-        name: "react",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "AWS Lambda",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "AWS S3",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "AWS CloudFormation",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AWS VPC",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Django",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: greencloud,
+    source_code_link:
+      "https://github.com/grmvishnu/Dalhousie_University_CSCI_5409_CC.git",
+  },
+  {
+    name: "Multi Cloud Serverless Hotel Management",
+    description:
+      "Synthesized a multi-cloud, serverless application for hotel reservations and custom tour packages, leveraging AWS and GCP to ensure high availability and scalability. Composed a microservices-based backend using AWS Lambda, GCP Cloud Functions, and containerized services with Docker. Used AWS Cognito for authentication and GCP Firestore for user data storage and validation, securing data with Caesar Cipher encryption. <br /> Integrated a chatbot using AWS Lex and a message-passing system with GCP Pub/Sub. Deployed Machine Learning models via Google Cloud Vertex AI for service automation. Generated reports and visualized data using Google Data Studio. Hosted the application on GCP using Cloud Run and GCP Registry for streamlined operations.",
+    tags: [
+      {
+        name: "ReactJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "NodeJS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GCP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Docker",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Machine Learning",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: serverless,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Tornado Prediction Model",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Crafted a predictive model to estimate tornado features, including latitude, longitude, length, width, magnitude, and associated damage costs. Formed a Neural Network to uncover relationships between tornado features and their locations. <br /> Applied ensemble modeling techniques using Linear Regression, Decision Tree, Random Forest, and Logistic Regression. Tuned models to achieve an accuracy of 72%, demonstrating robust predictions and reliable feature mapping.",
     tags: [
       {
-        name: "nextjs",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Machine Learning",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Neural Networks",
         color: "pink-text-gradient",
       },
+      {
+        name: "Data Science",
+        color: "blue-text-gradient",
+      },
     ],
-    image: tripguide,
+    image: tornado_model,
     source_code_link: "https://github.com/",
   },
 ];

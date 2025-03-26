@@ -91,7 +91,9 @@ const Education = () => {
           <p className={styles.sectionSubText}>
             Mentored by legends - yes, I was that lucky
           </p>
-          <h2 className={styles.sectionHeadText}>Education.</h2>
+          <h2 className={styles.sectionHeadText}>
+            My <span className="italic">Education</span>.
+          </h2>
         </motion.div>
 
         <motion.p

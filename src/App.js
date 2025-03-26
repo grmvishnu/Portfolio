@@ -9,7 +9,7 @@ import {
   Hero,
   Navbar,
   Skills,
-  Works,
+  Projects,
   StarsCanvas,
 } from "./components";
 
@@ -68,10 +68,10 @@ const App = () => {
             }
           />
           <Route
-            path="/works"
+            path="/projects"
             element={
               <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-                <Works />
+                <Projects />
               </div>
             }
           />

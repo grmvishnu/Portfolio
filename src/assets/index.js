@@ -46,22 +46,23 @@ import trackstudio from "./tech/trackstudio.png";
 import typescript from "./tech/typescript.png";
 import vtscada from "./tech/vtscada.png";
 
-import toppr from "./company/toppr.jpeg";
 import nsha from "./company/nsha.jpeg";
+import toppr from "./company/toppr.jpeg";
 import trihedral from "./company/trihedral.jpeg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import budgetsurfing from "./projects/budget_surfing.png";
+import dbms from "./projects/dbms.png";
+import ecommerce from "./projects/ecommerce.png";
+import greencloud from "./projects/green_cloud.png";
+import portfolio from "./projects/portfolio.png";
+import serverless from "./projects/serverless.png";
+import tornado_model from "./projects/tornado_model.png";
 
 export {
   github,
   toppr,
   nsha,
   trihedral,
-  carrent,
-  jobit,
-  tripguide,
   navbar_logo,
   menu,
   close,
@@ -107,4 +108,11 @@ export {
   trackstudio,
   typescript,
   vtscada,
+  portfolio,
+  budgetsurfing,
+  dbms,
+  greencloud,
+  serverless,
+  ecommerce,
+  tornado_model,
 };

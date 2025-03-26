@@ -16,10 +16,10 @@ const Ball = (props) => {
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[0, 0, 0.1]} />
-      <mesh castShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color="#white"
+          color="#fff8eb"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -37,10 +37,9 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  console.log(icon);
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
