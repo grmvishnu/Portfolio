@@ -95,7 +95,7 @@ const Projects = () => {
         business logic, and follow best practices in software development. Of
         course, no project is complete without its fair share of debugging
         marathons and last-minute "Eureka!" moments. But that's what makes
-        coding exciting! <br />
+        coding exciting! <br /> <br />
         Feel free to explore my work below. Some projects are personal
         experiments, others are solutions to real-world problems, but all of
         them reflect my enthusiasm for building great software. Click on the

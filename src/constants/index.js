@@ -74,10 +74,6 @@ export const navLinks = [
     title: "Projects",
   },
   {
-    id: "certifications",
-    title: "Certifications",
-  },
-  {
     id: "contact",
     title: "Contact",
   },
@@ -229,7 +225,7 @@ const projects = [
   {
     name: "Portfolio Website",
     description:
-      "Created an immersive digital portfolio using advanced technologies like React.js, Three.js and React Three Fiber, seamlessly integrating dynamic 3D hero sections, interactive work displays, and a visually stunning skills showcase that redefines user engagement. <br /> Engineered a refined, responsive interface with Tailwind CSS, enhanced by smooth cinematic animations via Framer Motion. The design features animated projects, certifications, and interactive sections that elevate the overall user experience. <br /> Implemented a fully automated CI/CD pipeline with GitHub Actions, streamlining the build process and seamlessly deploying updates to AWS S3. Leveraged AWS CloudFront for secure HTTPS connections, global content delivery, ensuring optimal performance and scalability across all device.",
+      "Created an immersive digital portfolio using advanced technologies like React.js, Three.js, and React Three Fiber, seamlessly integrating dynamic 3D sections. Engineered a refined, responsive interface with Tailwind CSS, enhanced by smooth cinematic animations via Framer Motion. <br /> Implemented a fully automated CI/CD pipeline with GitHub Actions, streamlining the build process and seamlessly deploying updates to AWS S3. Leveraged AWS CloudFront for secure HTTPS connections and global content delivery, ensuring optimal performance & scalability across all devices. <br /> Integrated EmailJS for seamless email communication, enabling dynamic contact form functionality without requiring a backend server, ensuring efficient and user-friendly messaging capabilities",
     tags: [
       {
         name: "React.js",
@@ -240,7 +236,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "React Three Fiber",
+        name: "EmailJS",
         color: "pink-text-gradient",
       },
       {

@@ -5,7 +5,6 @@ import {
   Education,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Skills,
@@ -75,18 +74,13 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/feedbacks" element={<Feedbacks />} />
           <Route
             path="/contact"
             element={
-              <>
-                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-                  <Contact />
-                </div>
-                <div className="relative z-0">
-                  <StarsCanvas />
-                </div>
-              </>
+              <div className="relative z-0">
+                <Contact />
+                <StarsCanvas />
+              </div>
             }
           />
         </Routes>
