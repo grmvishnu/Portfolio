@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, slideIn, textVariant } from "../utils/motion";
+import { ArrowUpRight } from "lucide-react";
 
 const Contact = () => {
   const formRef = useRef();
@@ -88,6 +89,21 @@ const Contact = () => {
       >
         Thanks for reaching the end of this application. If you like what you
         see, let's connect and build something together!
+      </motion.p>
+
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-secondary text-[17px] w-full leading-[30px]"
+      >
+        Alternatively, here's a fancy sheet of paper.{" "}
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 inline-flex items-center gap-1"
+        >
+          <span>Résumé</span> <ArrowUpRight size={18} />
+        </a>
       </motion.p>
 
       <div

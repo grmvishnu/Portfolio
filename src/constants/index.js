@@ -77,6 +77,12 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "resume",
+    title: "Resume",
+    external: true,
+    link: "/resume.pdf",
+  },
 ];
 
 const schools = [

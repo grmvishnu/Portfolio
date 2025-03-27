@@ -67,7 +67,16 @@ const Navbar = () => {
                 }
               }}
             >
-              {link.title === "About" ? (
+              {link.id === "resume" ? (
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  {link.title}
+                </a>
+              ) : link.id === "about" ? (
                 <span className="cursor-pointer">About</span>
               ) : (
                 <Link to={`/${link.id}`}>{link.title}</Link>
@@ -99,14 +108,18 @@ const Navbar = () => {
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
-                    if (link.title === "About") {
+                    if (link.id === "resume") {
+                      window.open("/resume.pdf", "_blank");
+                    } else if (link.id === "about") {
                       handleAboutClick();
                     } else {
                       navigate(`/${link.id}`);
                     }
                   }}
                 >
-                  {link.title === "About" ? (
+                  {link.id === "resume" ? (
+                    <span className="cursor-pointer">Resume</span>
+                  ) : link.id === "about" ? (
                     <span className="cursor-pointer">About</span>
                   ) : (
                     <Link to={`/${link.id}`}>{link.title}</Link>
