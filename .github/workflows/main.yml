@@ -23,6 +23,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Inject Environment Variables
+        run: |
+          echo "REACT_APP_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> $GITHUB_ENV
+          echo "REACT_APP_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "REACT_APP_EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> $GITHUB_ENV
+
       - name: Build the app
         run: npm run build
 
