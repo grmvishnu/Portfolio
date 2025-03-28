@@ -58,8 +58,8 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer font-calibri`}
+                active === link.title ? "text-white" : "text-gray-400"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => {
                 setActive(link.title);
                 if (link.title === "About") {

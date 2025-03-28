@@ -12,6 +12,7 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Education from "./Education";
+import Footer from "./Footer";
 
 export {
   Hero,
@@ -22,6 +23,7 @@ export {
   Experience,
   Projects,
   Contact,
+  Footer,
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,

@@ -87,8 +87,8 @@ const Contact = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] w-full leading-[30px]"
       >
-        Thanks for reaching the end of this application. If you like what you
-        see, let's connect and build something together!
+        Thanks for reaching the end of this portfolio. If you like what you see,
+        let's connect and build something together!
       </motion.p>
 
       <motion.p

@@ -10,6 +10,7 @@ import {
   Skills,
   Projects,
   StarsCanvas,
+  Footer,
 } from "./components";
 
 const ScrollToTop = () => {
@@ -84,6 +85,7 @@ const App = () => {
             }
           />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
